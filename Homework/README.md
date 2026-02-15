@@ -1,5 +1,6 @@
 # Homework
 Run Docker
+
 ![alt text](<Screenshot 2026-02-14 222100.png>)
 
 Run Python code to Ingest Data
