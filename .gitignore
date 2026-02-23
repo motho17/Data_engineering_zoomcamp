@@ -1,5 +1,11 @@
 *.parquet
 
+# Environment variables and secrets
+.env.original
+.env_encoded
+# This will ignore all JSON files, including siri.json
+
+*.json  
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
