@@ -48,7 +48,7 @@ First, your `tip_model` must be exported from BigQuery ML to a Google Cloud Stor
 #   --project_id=your_project_id \
 #   your_dataset_id.your_model_name \
 #   gs://your-gcs-bucket/ml_models/your_model_name/
-
+```
 ### Step 2: Prepare Local Environment and Download Model Artifacts
 Next, we will set up a temporary local directory and download the model files from GCS into it.
 
@@ -189,3 +189,4 @@ Finally, send a sample prediction request to your running model server to confir
     curl http://localhost:8501/v1/models/tip_model
     ```
     **Expected Output:** A JSON response indicating the model's state (e.g., `AVAILABLE`) and its version.
+
