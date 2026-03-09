@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: dim_zones
+    description: >
+      Zone lookup table containing LocationID, borough, zone name and service zone.
+      One row per taxi zone in NYC.
+    columns:
+      - name: locationid
+        description: Primary key for taxi zones
+        tests:
+          - unique
+          - not_null
+      
+      - name: borough
+        description: NYC borough name (Manhattan, Queens, Brooklyn, Bronx, Staten Island, EWR)
+      
+      - name: zone
+        description: Taxi zone name/neighborhood
+      
+      - name: service_zone
+        description: Service zone type (Yellow, Green, or Airports)
+
+
+version: 2
+
+models:
+  - name: fct_trips
+    description: |
+      Fact table containing all taxi trips from both yellow and green taxis.
+      
+      This is the core analytical table for trip-level analysis.
+      Each row represents a single trip with:
+      - Trip identifiers and service type
+      - Pickup and dropoff locations and timestamps
+      - Trip details (distance, passenger count, etc.)
+      - Payment information and amounts
+      
+      Data is filtered for 2019-2020 only and excludes records
+      with unknown pickup or dropoff locations.        
