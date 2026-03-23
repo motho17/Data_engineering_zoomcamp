@@ -223,3 +223,14 @@ logs/*.log
 
 .bruin.yml
 duckdb.db
+# Ignore all large CSV files
+06-batch-processing/code/fhvhv/*.csv*
+06-batch-processing/code/data/
+code/data/
+06-batch-processing/code/data/
+06-batch-processing/code/tmp/
+06-batch-processing/code/fhvhv/
+06-batch-processing/code/lib/
+06-batch-processing/code/zones/
+06-batch-processing/code/fhvhv_tripdata_*.csv*
+*.parquet
